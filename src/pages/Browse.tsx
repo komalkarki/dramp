@@ -11,6 +11,10 @@ import { useToast } from '@/hooks/use-toast';
 import Navbar from '@/components/Layout/Navbar';
 import Footer from '@/components/Layout/Footer';
 import ContactHostModal from '@/components/ContactHostModal';
+import apartmentImage from '@/assets/apartment-interior.jpg';
+import studioImage from '@/assets/studio-apartment.jpg';
+import sharedHousingImage from '@/assets/shared-housing.jpg';
+import italyCityscape from '@/assets/italy-cityscape.jpg';
 
 interface Listing {
   id: string;
@@ -44,7 +48,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Laundry', 'Parking', 'Pet Friendly'],
     reportCount: 0,
     verifiedHost: true,
-    images: ['/placeholder.svg'],
+    images: [apartmentImage],
     createdAt: '2024-01-15'
   },
   {
@@ -60,7 +64,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Utilities Included', 'Study Area'],
     reportCount: 1,
     verifiedHost: true,
-    images: ['/placeholder.svg'],
+    images: [sharedHousingImage],
     createdAt: '2024-01-10'
   },
   {
@@ -76,7 +80,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Gym', 'Concierge', 'Historic View'],
     reportCount: 0,
     verifiedHost: true,
-    images: ['/placeholder.svg'],
+    images: [studioImage],
     createdAt: '2024-01-20'
   },
   {
@@ -92,7 +96,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Kitchen Access', 'Family Friendly'],
     reportCount: 2,
     verifiedHost: false,
-    images: ['/placeholder.svg'],
+    images: [apartmentImage],
     createdAt: '2024-01-05'
   },
   {
@@ -108,7 +112,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Air Conditioning', 'Balcony', 'Study Space'],
     reportCount: 0,
     verifiedHost: true,
-    images: ['/placeholder.svg'],
+    images: [apartmentImage],
     createdAt: '2024-01-18'
   },
   {
@@ -124,7 +128,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Historic Building', 'Canal View', 'Shared Kitchen'],
     reportCount: 0,
     verifiedHost: true,
-    images: ['/placeholder.svg'],
+    images: [apartmentImage],
     createdAt: '2024-01-12'
   },
   {
@@ -140,7 +144,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Study Room', 'Bike Storage', 'Garden'],
     reportCount: 0,
     verifiedHost: true,
-    images: ['/placeholder.svg'],
+    images: [apartmentImage],
     createdAt: '2024-01-08'
   },
   {
@@ -156,7 +160,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Pool', 'Garden', 'Parking', 'BBQ Area'],
     reportCount: 1,
     verifiedHost: true,
-    images: ['/placeholder.svg'],
+    images: [sharedHousingImage],
     createdAt: '2024-01-14'
   },
   {
@@ -172,7 +176,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Terrace', 'City View', 'Elevator', 'Premium Location'],
     reportCount: 0,
     verifiedHost: true,
-    images: ['/placeholder.svg'],
+    images: [apartmentImage],
     createdAt: '2024-01-22'
   }
 ];
@@ -266,13 +270,20 @@ const Browse = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      <div className="container mx-auto px-4 py-8">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-foreground mb-2">Browse Verified Listings</h1>
-          <p className="text-muted-foreground">
-            Find transparent, discrimination-free housing with verified host ratings and safety reports.
-          </p>
+      {/* Hero Section with Background */}
+      <div className="relative h-64 bg-cover bg-center" style={{ backgroundImage: `url(${italyCityscape})` }}>
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative container mx-auto px-4 h-full flex items-center">
+          <div className="text-white">
+            <h1 className="text-4xl font-bold mb-2">Browse Verified Listings</h1>
+            <p className="text-xl text-white/90">
+              Find transparent, discrimination-free housing with verified host ratings and safety reports.
+            </p>
+          </div>
         </div>
+      </div>
+      
+      <div className="container mx-auto px-4 py-8">
 
         {/* Search and Filters */}
         <Card className="mb-8 shadow-soft">
@@ -344,7 +355,10 @@ const Browse = () => {
         {/* Listings Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {filteredAndSortedListings.map((listing) => (
-            <Card key={listing.id} className="shadow-soft hover:shadow-lg transition-shadow animate-fade-in">
+            <Card key={listing.id} className="shadow-soft hover:shadow-lg transition-shadow animate-fade-in overflow-hidden">
+              {/* Listing Image */}
+              <div className="h-48 bg-cover bg-center" style={{ backgroundImage: `url(${listing.images[0]})` }}></div>
+              
               <CardHeader className="pb-3">
                 <div className="flex justify-between items-start mb-2">
                   <Badge variant="outline">{listing.propertyType}</Badge>

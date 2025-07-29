@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Shield, Users, TrendingUp, Award, Heart, Lightbulb, Target, CheckCircle } from 'lucide-react';
 import Navbar from '@/components/Layout/Navbar';
 import Footer from '@/components/Layout/Footer';
+import italyCityscape from '@/assets/italy-cityscape.jpg';
 
 const About = () => {
   const stats = [
@@ -50,14 +51,14 @@ const About = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="absolute inset-0 bg-gradient-primary opacity-10"></div>
+      <section className="relative py-20 px-4 bg-cover bg-center" style={{ backgroundImage: `url(${italyCityscape})` }}>
+        <div className="absolute inset-0 bg-black/60"></div>
         <div className="container mx-auto text-center relative">
           <Badge variant="accent" className="mb-4">About DRAMP</Badge>
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Revolutionizing Fair Housing
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
             DRAMP (Discrimination Reporting and Monitoring Platform) is dedicated to creating a 
             transparent, accountable, and discrimination-free housing marketplace for everyone.
           </p>

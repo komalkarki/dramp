@@ -5,6 +5,8 @@ import { Shield, CheckCircle, Star, Users, MapPin, Search, TrendingUp, Award } f
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Layout/Navbar';
 import Footer from '@/components/Layout/Footer';
+import safeHousingImage from '@/assets/safe-housing.jpg';
+import italyCityscape from '@/assets/italy-cityscape.jpg';
 
 const SafeListings = () => {
   const verificationFeatures = [
@@ -53,8 +55,8 @@ const SafeListings = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 bg-gradient-hero">
-        <div className="absolute inset-0 bg-black/10"></div>
+      <section className="relative py-20 px-4 bg-cover bg-center" style={{ backgroundImage: `url(${safeHousingImage})` }}>
+        <div className="absolute inset-0 bg-black/60"></div>
         <div className="container mx-auto text-center relative">
           <Badge variant="accent" className="mb-6">Verified Safe Housing</Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -183,8 +185,8 @@ const SafeListings = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-hero relative">
-        <div className="absolute inset-0 bg-black/10"></div>
+      <section className="relative py-16 px-4 bg-cover bg-center" style={{ backgroundImage: `url(${italyCityscape})` }}>
+        <div className="absolute inset-0 bg-black/60"></div>
         <div className="container mx-auto text-center relative">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Find Safe Housing?
