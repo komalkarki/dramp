@@ -27,28 +27,28 @@ const Contact = () => {
       icon: Mail,
       title: 'Email Support',
       description: 'Get help via email',
-      value: 'support@dramp.com',
-      action: 'mailto:support@dramp.com'
+      value: 'support@dramp.it',
+      action: 'mailto:support@dramp.it'
     },
     {
       icon: Phone,
       title: 'Phone Support',
       description: 'Speak with our team',
-      value: '1-800-DRAMP-01',
-      action: 'tel:+18003726701'
+      value: '+39 02 1234 5678',
+      action: 'tel:+390212345678'
     },
     {
       icon: MapPin,
       title: 'Office Location',
       description: 'Visit us in person',
-      value: '123 Fair Housing Ave\nSan Francisco, CA 94102',
+      value: 'Via Roma 123\n20121 Milan, Italy',
       action: null
     },
     {
       icon: Clock,
       title: 'Business Hours',
       description: 'When we\'re available',
-      value: 'Mon-Fri: 9AM-6PM PST\nWeekends: 10AM-4PM PST',
+      value: 'Mon-Fri: 9AM-6PM CET\nWeekends: 10AM-4PM CET',
       action: null
     }
   ];
@@ -250,7 +250,7 @@ const Contact = () => {
                   please contact us immediately or call our emergency hotline.
                 </p>
                 <Button variant="outline" className="w-full" asChild>
-                  <a href="tel:+18003726701">Emergency Hotline</a>
+                  <a href="tel:+390212345678">Emergency Hotline</a>
                 </Button>
               </CardContent>
             </Card>

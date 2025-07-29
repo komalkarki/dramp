@@ -25,11 +25,11 @@ const discriminationTypes = [
 ];
 
 const locationData = [
-  { city: 'New York', reports: 125, risk: 'high' },
-  { city: 'Los Angeles', reports: 89, risk: 'medium' },
-  { city: 'Chicago', reports: 76, risk: 'medium' },
-  { city: 'Boston', reports: 45, risk: 'low' },
-  { city: 'San Francisco', reports: 38, risk: 'low' }
+  { city: 'Milan', reports: 125, risk: 'high' },
+  { city: 'Rome', reports: 89, risk: 'medium' },
+  { city: 'Naples', reports: 76, risk: 'medium' },
+  { city: 'Bologna', reports: 45, risk: 'low' },
+  { city: 'Florence', reports: 38, risk: 'low' }
 ];
 
 const Dashboard = () => {
@@ -249,7 +249,7 @@ const Dashboard = () => {
                 <div className="flex-1">
                   <h4 className="font-medium">New discrimination report filed</h4>
                   <p className="text-sm text-muted-foreground">
-                    Race-based discrimination reported in Boston, MA apartment complex
+                    Race-based discrimination reported in Milan apartment complex
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">2 hours ago</p>
                 </div>
@@ -263,7 +263,7 @@ const Dashboard = () => {
                 <div className="flex-1">
                   <h4 className="font-medium">Listing verified as safe</h4>
                   <p className="text-sm text-muted-foreground">
-                    New York apartment complex passed verification checks
+                    Rome apartment complex passed verification checks
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">4 hours ago</p>
                 </div>

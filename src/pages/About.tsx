@@ -62,7 +62,7 @@ const About = () => {
             transparent, accountable, and discrimination-free housing marketplace for everyone.
           </p>
           <Button size="lg" asChild>
-            <a href="/browse">Explore Safe Listings</a>
+            <a href="/safe-listings">Explore Safe Listings</a>
           </Button>
         </div>
       </section>

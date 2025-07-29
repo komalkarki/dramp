@@ -183,7 +183,7 @@ const Report = () => {
                   id="street"
                   value={reportData.street}
                   onChange={(e) => updateReportData('street', e.target.value)}
-                  placeholder="123 Main Street"
+                  placeholder="Via Roma 123"
                 />
               </div>
               
@@ -193,17 +193,17 @@ const Report = () => {
                   id="city"
                   value={reportData.city}
                   onChange={(e) => updateReportData('city', e.target.value)}
-                  placeholder="New York"
+                  placeholder="Milan"
                 />
               </div>
               
               <div>
-                <Label htmlFor="state">State *</Label>
+                <Label htmlFor="state">Region *</Label>
                 <Input
                   id="state"
                   value={reportData.state}
                   onChange={(e) => updateReportData('state', e.target.value)}
-                  placeholder="NY"
+                  placeholder="Lombardy"
                 />
               </div>
               
@@ -213,7 +213,7 @@ const Report = () => {
                   id="zipCode"
                   value={reportData.zipCode}
                   onChange={(e) => updateReportData('zipCode', e.target.value)}
-                  placeholder="10001"
+                  placeholder="20121"
                 />
               </div>
               
@@ -358,7 +358,7 @@ const Report = () => {
               <div className="bg-secondary/50 p-4 rounded-lg">
                 <h4 className="font-medium mb-2">Location</h4>
                 <p className="text-sm text-muted-foreground">
-                  {reportData.street}, {reportData.city}, {reportData.state} {reportData.zipCode}
+                  {reportData.street}, {reportData.city}, {reportData.state}, {reportData.zipCode}
                 </p>
                 <Badge variant="outline" className="mt-1">{reportData.propertyType}</Badge>
               </div>
