@@ -11,9 +11,15 @@ import { useToast } from '@/hooks/use-toast';
 import Navbar from '@/components/Layout/Navbar';
 import Footer from '@/components/Layout/Footer';
 import ContactHostModal from '@/components/ContactHostModal';
-import apartmentImage from '@/assets/apartment-interior.jpg';
-import studioImage from '@/assets/studio-apartment.jpg';
-import sharedHousingImage from '@/assets/shared-housing.jpg';
+import modern2brApartment from '@/assets/modern-2br-apartment.jpg';
+import studentSharedHousing from '@/assets/student-shared-housing.jpg';
+import luxuryStudioFlorence from '@/assets/luxury-studio-florence.jpg';
+import cozyFamilyRoom from '@/assets/cozy-family-room.jpg';
+import modernLoftNaples from '@/assets/modern-loft-naples.jpg';
+import elegantVeniceRoom from '@/assets/elegant-venice-room.jpg';
+import studentApartmentTurin from '@/assets/student-apartment-turin.jpg';
+import sharedVillaPool from '@/assets/shared-villa-pool.jpg';
+import luxuryPenthouseMilan from '@/assets/luxury-penthouse-milan.jpg';
 import italyCityscape from '@/assets/italy-cityscape.jpg';
 
 interface Listing {
@@ -48,7 +54,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Laundry', 'Parking', 'Pet Friendly'],
     reportCount: 0,
     verifiedHost: true,
-    images: [apartmentImage],
+    images: [modern2brApartment],
     createdAt: '2024-01-15'
   },
   {
@@ -64,7 +70,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Utilities Included', 'Study Area'],
     reportCount: 1,
     verifiedHost: true,
-    images: [sharedHousingImage],
+    images: [studentSharedHousing],
     createdAt: '2024-01-10'
   },
   {
@@ -80,7 +86,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Gym', 'Concierge', 'Historic View'],
     reportCount: 0,
     verifiedHost: true,
-    images: [studioImage],
+    images: [luxuryStudioFlorence],
     createdAt: '2024-01-20'
   },
   {
@@ -96,7 +102,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Kitchen Access', 'Family Friendly'],
     reportCount: 2,
     verifiedHost: false,
-    images: [apartmentImage],
+    images: [cozyFamilyRoom],
     createdAt: '2024-01-05'
   },
   {
@@ -112,7 +118,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Air Conditioning', 'Balcony', 'Study Space'],
     reportCount: 0,
     verifiedHost: true,
-    images: [apartmentImage],
+    images: [modernLoftNaples],
     createdAt: '2024-01-18'
   },
   {
@@ -128,7 +134,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Historic Building', 'Canal View', 'Shared Kitchen'],
     reportCount: 0,
     verifiedHost: true,
-    images: [apartmentImage],
+    images: [elegantVeniceRoom],
     createdAt: '2024-01-12'
   },
   {
@@ -144,7 +150,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Study Room', 'Bike Storage', 'Garden'],
     reportCount: 0,
     verifiedHost: true,
-    images: [apartmentImage],
+    images: [studentApartmentTurin],
     createdAt: '2024-01-08'
   },
   {
@@ -160,7 +166,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Pool', 'Garden', 'Parking', 'BBQ Area'],
     reportCount: 1,
     verifiedHost: true,
-    images: [sharedHousingImage],
+    images: [sharedVillaPool],
     createdAt: '2024-01-14'
   },
   {
@@ -176,7 +182,7 @@ const mockListings: Listing[] = [
     amenities: ['WiFi', 'Terrace', 'City View', 'Elevator', 'Premium Location'],
     reportCount: 0,
     verifiedHost: true,
-    images: [apartmentImage],
+    images: [luxuryPenthouseMilan],
     createdAt: '2024-01-22'
   }
 ];
